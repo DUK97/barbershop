@@ -61,7 +61,7 @@ h1 {
 }
 
 .inner-page .main-header {
-  margin-bottom: 50px;
+  margin-bottom: 55px;
   background-color: #000000;
 }
 
@@ -107,6 +107,10 @@ h1 {
   width: 940px;
   margin: 0 auto;
   padding: 0 10px;
+}
+
+.container h3 {
+  margin: 0;
 }
 
 .site-navigation {
@@ -195,6 +199,10 @@ h1 {
   top: 29px;
 }
 
+.price-page h3 {
+  margin-bottom: 27px;
+}
+
 .inner-page {
   color: #000000;
 
@@ -216,28 +224,14 @@ h1 {
   font-size: 48px;
   line-height: 48px;
 
-  margin-top: 55px;
-  margin-bottom: 65px;
+  margin-top: 45px;
+  margin-bottom: 61px;
 
   display: flex;
   align-items: center;
 }
 
-.big-header::before {
-  content: "";
-
-  width: 50px;
-  height: 2px;
-
-  flex-grow: 1;
-  flex-shrink: 0;
-
-  margin-top: 55px;
-  margin-bottom: 65px;
-
-  background-color: #000000;
-}
-
+.big-header::before,
 .big-header::after {
   content: "";
 
@@ -247,10 +241,15 @@ h1 {
   flex-grow: 1;
   flex-shrink: 0;
 
-  margin-top: 55px;
-  margin-bottom: 65px;
-
   background-color: #000000;
+}
+
+.big-header::before {
+  margin-right: 20px;
+}
+
+.big-header::after {
+  margin-left: 20px;
 }
 
 .container h3 {
@@ -263,7 +262,11 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
 
-  margin-bottom: 49px;
+  margin-bottom: 58px;
+}
+
+.price-page .breadcrumb-wrapper {
+  margin-bottom: 44px;
 }
 
 .breadcrumb-list {
@@ -284,7 +287,7 @@ h1 {
 .breadcrumb-item {
   position: relative;
 
-  margin-right: 42px;
+  margin-right: 40px;
 
   line-height: 20px;
 }
@@ -338,7 +341,10 @@ h1 {
 }
 
 .item-photos img {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+
+  max-width: 100%;
+  height: auto;
 }
 
 .item-photo-preview-list {
@@ -356,6 +362,9 @@ h1 {
 }
 
 .item-photo-preview-list li {
+  width: 140px;
+  height: 149px;
+
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -378,24 +387,119 @@ h1 {
 }
 
 .item-article {
-  text-align: right;
+  width: 300px;
 
   color: #aeaeae;
+  text-align: right;
+
+  padding-right: 13px;
 }
 
 .item-description {
   width: 390px;
 }
 
-.item-description b {
-  text-align: center;
+.item-info {
+  display: flex;
+}
 
-  background-color: #e5e5e5;
+.item-availability {
+  width: 110px;
+}
+
+.item-description-text {
+  margin-bottom: 35px;
+}
+
+.product-price {
+  display: flex;
+
+  margin-bottom: 62px;
+}
+
+.product-price .button {
+  width: fit-content;
+
+  padding: 9px 18px;
 }
 
 .item-description h3 {
   line-height: 30px;
   font-size: 24px;
+
+  margin-bottom: 25px;
+}
+
+.item-include {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.item-include li {
+  padding-left: 16px;
+
+  position: relative;
+}
+
+.item-include li::before,
+.inner-column-left li::before {
+  content: "";
+
+  position: absolute;
+
+  top: 35%;
+  left: 0;
+
+  width: 7px;
+  height: 7px;
+
+  background-color: #000000;
+
+  transform: rotate(45deg);
+}
+
+.inner-columns {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 46px;
+}
+
+.inner-column-left {
+  width: 280px;
+}
+
+.inner-column-left h3 {
+  margin-bottom: 27px;
+}
+
+.inner-column-left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.inner-column-left li {
+  position: relative;
+
+  padding-left: 19px;
+  margin-bottom: 13px;
+}
+
+.inner-column-right {
+  width: 461px;
+}
+
+.table-price td {
+  width: 231px;
+
+  padding: 9px 19px;
+}
+
+.table-price td:last-child {
+  text-align: center;
 }
 
 .filters {
@@ -537,7 +641,8 @@ h1 {
   margin-bottom: 14px;
 }
 
-.catalog-item-price b {
+.catalog-item-price b,
+.product-price b {
   font-size: 14px;
   line-height: 20px;
   text-align: center;
@@ -545,6 +650,10 @@ h1 {
   background-color: #e5e5e5;
 
   padding: 13px 39px;
+}
+
+.product-price b {
+  padding: 13px 34px;
 }
 
 .catalog-item-price .button {
@@ -605,6 +714,21 @@ h1 {
   background-color: #ffffff;
 }
 
+.text-wrapper {
+  display: flex;
+}
+
+.text-wrapper p {
+  width: 383px;
+
+  padding: 0;
+  margin: 0;
+}
+
+.text-wrapper p:first-child {
+  margin-right: 96px;
+}
+
 .features {
   margin-bottom: 57px;
 }
@@ -628,7 +752,6 @@ h1 {
 .feature-item h3 {
   font-size: 30px;
   line-height: 42px;
-  margin: 0;
   margin-bottom: 59px;
 
   position: relative;
